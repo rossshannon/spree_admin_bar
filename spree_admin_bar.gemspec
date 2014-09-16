@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_admin_bar'
-  s.version     = '2.1.0'
+  s.version     = '2.1.1'
   s.summary     = 'Adds an admin bar to a Spree shop front-end.'
   s.description = 'Adds an admin bar to a Spree shop front-end to allow an admin user to quickly navigate to the relevant section in the admin pages.'
   s.required_ruby_version = '>= 1.9.3'
