@@ -4,12 +4,12 @@
 
     <% if @product %>
 
-      <%= link_to "Edit Product", edit_admin_product_path(@product) %> 
-      | <%= link_to "Images", admin_product_images_path(@product) %>
-      | <%= link_to "Variants", admin_product_variants_path(@product) %>
-      | <%= link_to "Properties", admin_product_product_properties_path(@product) %>
+      <%= link_to "Edit Product", edit_admin_product_path(@product), 'data-no-turbolink' => true %> 
+      | <%= link_to "Product Images", admin_product_images_path(@product), 'data-no-turbolink' => true %>
+      | <%= link_to "Variants", admin_product_variants_path(@product), 'data-no-turbolink' => true %>
+      | <%= link_to "Properties", admin_product_product_properties_path(@product), 'data-no-turbolink' => true %>
       <% if defined? Spree::Relation %>
-        | <%= link_to "Related", related_admin_product_path(@product) %>
+        | <%= link_to "Related", related_admin_product_path(@product), 'data-no-turbolink' => true %>
       <% end %>
 
       <% ssl_required = Spree::Config[:allow_ssl_in_production] and Rails.env.production? %>
@@ -17,12 +17,12 @@
 
     <% elsif @taxon %>
 
-      <%= link_to 'Edit Taxonomy', edit_admin_taxonomy_path(@taxon.taxonomy) %>
-      | <%= link_to 'Edit Taxon', edit_admin_taxonomy_taxon_path(@taxon.taxonomy.id, @taxon.id) %>
+      <%= link_to 'Edit Taxonomy', edit_admin_taxonomy_path(@taxon.taxonomy), 'data-no-turbolink' => true %>
+      | <%= link_to 'Edit Taxon', edit_admin_taxonomy_taxon_path(@taxon.taxonomy.id, @taxon.id), 'data-no-turbolink' => true %>
 
     <% elsif defined? Spree::Page and @page %>
 
-      <%= link_to 'Edit Page', edit_admin_page_path(@page) %>
+      <%= link_to 'Edit Page', edit_admin_page_path(@page), 'data-no-turbolink' => true %>
 
     <% end %>
 
