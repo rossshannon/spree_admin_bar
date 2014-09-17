@@ -1,6 +1,6 @@
 <% if try_spree_current_user.try(:has_spree_role?, "admin") %>
   <div id="admin_bar">
-    <strong>Spree <%= link_to 'Admin', admin_path %>: &nbsp;</strong>
+    <strong>Spree <%= link_to 'Admin', admin_path, 'data-no-turbolink' => true %>: &nbsp;</strong>
 
     <% if @product %>
 
